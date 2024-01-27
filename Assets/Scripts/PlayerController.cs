@@ -17,11 +17,13 @@ public class PlayerController : MonoBehaviour
     public Camera cam;
     public GameObject bulletPrefab;
     public Transform barrel;
+    private bool canShoot;
     #endregion
 
     void Start()
     {
         _rb2d = GetComponent<Rigidbody2D>();
+        canShoot = true;
     }
 
     
@@ -31,10 +33,19 @@ public class PlayerController : MonoBehaviour
         _moveInput.y = Input.GetAxisRaw("Vertical");
         _moveInput.Normalize();
 
-        if(Input.GetMouseButtonDown(0))
+
+        if(Input.GetMouseButton(0) && canShoot)
         {
             Shoot();
+            StartCoroutine(ShotCooldown(0.5f));
         }
+    }
+
+    IEnumerator ShotCooldown(float cooldownTime)
+    {
+        canShoot = false;
+        yield return new WaitForSeconds(cooldownTime);
+        canShoot = true;
     }
 
     void FixedUpdate()
