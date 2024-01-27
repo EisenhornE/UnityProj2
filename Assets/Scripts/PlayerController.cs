@@ -5,14 +5,19 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    #region For Movement Variables
     private Vector2 _moveInput;
     private Vector2 _mousePos;
-    [SerializeField] float playerSpeed;
-    [SerializeField] float bulletSpeed;
     private Rigidbody2D _rb2d;
+    [SerializeField] float playerSpeed;
+    #endregion
+
+    #region For Shooting Mechanic Variables
+    [SerializeField] float bulletSpeed;
     public Camera cam;
     public GameObject bulletPrefab;
     public Transform barrel;
+    #endregion
 
     void Start()
     {
