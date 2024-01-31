@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         _moveInput.Normalize();
 
 
-        if(Input.GetMouseButton(0) && canShoot)
+        if(canShoot)
         {
             Shoot();
             StartCoroutine(ShotCooldown(0.5f));
