@@ -5,3 +5,5 @@ Proper ReadMe after project conclusion.
 
 #TODO 
 Create Powerups
+
+Paused indefinitely due to IRL problems. 
