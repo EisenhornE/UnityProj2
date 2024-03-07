@@ -6,4 +6,4 @@ Proper ReadMe after project conclusion.
 #TODO 
 Create Powerups
 
-Paused indefinitely due to IRL problems. 
+Abandoned due to IRL issues and wasn't able to save a Unity Package. Will save it for reference in case I do return to using Unity (moved to Godot at the meantime)
